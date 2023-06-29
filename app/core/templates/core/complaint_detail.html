@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container my-5">
+    <div class="col-lg-8 mx-auto shadow p-5 rounded-4">
+        <div class="h3">{{object.name|default:"nothing"}}</div>
+        <hr>
+        <div>
+            <span>Summary: </span>
+            <p>{{object.summary|default:"nothing"}}</p>
+        </div>
+        <br>
+        <div class="h2">Information on Consumer</div>
+        <hr>
+        <div>
+            <span>email: </span>
+            <p>{{object.email|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>address: </span>
+            <p>{{object.address|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>occupation: </span>
+            <p>{{object.occupation|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>phone: </span>
+            <p>{{object.phone|default:"nothing"}}/{{object.phone1|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>gender: </span>
+            <p>{{object.gender|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>age_group: </span>
+            <p>{{object.age_group|default:"nothing"}}</p>
+        </div>
+        <br>
+        <div class="h2">Information On Business</div>
+        <hr>
+        <div>
+            <span>business_name: </span>
+            <p>{{object.business_name|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>business_address: </span>
+            <p>{{object.business_address|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>business_sector: </span>
+            <p>{{object.business_sector|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>contact_person: </span>
+            <p>{{object.contact_person|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>business_phone: </span>
+            <p>{{object.business_phone|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>business_email: </span>
+            <p>{{object.business_email|default:"nothing"}}</p>
+        </div>
+        <br>
+        <div class="h2">Information On Goods/Services</div>
+        <hr>
+        <div>
+            <span>goods_services: </span>
+            <p>{{object.goods_services|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>category: </span>
+            <p>{{object.category|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>date_purchased: </span>
+            <p>{{object.date_purchased|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>warranty_guaranty: </span>
+            <p>{{object.warranty_guaranty|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>invoice_receipt_bill: </span>
+            <p>{{object.invoice_receipt_bill|default:"nothing"}}</p>
+        </div>
+        <br>
+        <div class="h2">Technical Information On Goods/Services</div>
+        <hr>
+        <div>
+            <span>model_serial_number: </span>
+            <p>{{object.model_serial_number|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>brand: </span>
+            <p>{{object.brand|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>brand_code: </span>
+            <p>{{object.brand_code|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>manufactured_date: </span>
+            <p>{{object.manufactured_date|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>standard: </span>
+            <p>{{object.standard|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>electrical_frequency_rating: </span>
+            <p>{{object.electrical_frequency_rating|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>voltage_required: </span>
+            <p>{{object.voltage_required|default:"nothing"}}</p>
+        </div>
+        <br>
+        <div class="h2">The Complaint</div>
+        <hr>
+        <div>
+            <p>{{object.complaint}}</p>
+        </div>
+        <br>
+        <div class="h2">Redress Sought</div>
+        <hr>
+        <div>
+            <p>{{object.redress|default:"nothing"}}</p>
+        </div>
+        <div>
+            <span>other redress: </span>
+            <p>{{object.other_redress|default:"nothing"}}</p>
+        </div>
+        <br>
+        <div class="h2">Willingness To Attend Proceedings</div>
+        <hr>
+        <div>
+            <p>{{object.i_agree|yesno:"Yes,No"}}</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

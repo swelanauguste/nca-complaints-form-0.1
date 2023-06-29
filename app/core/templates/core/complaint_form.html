@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="col-lg-10 mx-auto shadow p-5 rounded-4">
+        <div class="display-4 text-center">National Consumers' Association
+        </div>
+        <br>
+        <div class="display-6 text-center">Consumer Complaint Form</div>
+        <hr><br>
+        <form action=""
+            method="post">
+            {% csrf_token %}
+            <div class="h2">Information On Consumer</div>
+            <hr><br>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.summary|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.name|as_crispy_field }}
+                </div>
+                <div class="col-lg-4">
+                    {{ form.id_number|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.email|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.address|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.occupation|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.phone|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.phone1|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.gender|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.age_group|as_crispy_field }}
+                </div>
+            </div>
+            <br><br><br>
+            <div class="h2">Information On Business</div>
+            <hr><br>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.contact_person|as_crispy_field }}
+                </div>
+                <div class="col-lg-4">
+                    {{ form.business_phone|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.business_name|as_crispy_field }}
+                </div>
+                <div class="col-lg-4">
+                    {{ form.business_sector|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.business_address|as_crispy_field }}
+                </div>
+                <div class="col-lg-5">
+                    {{ form.business_email|as_crispy_field }}
+                </div>
+            </div>
+            <br><br><br>
+            <div class="h2">Information On Goods/Services</div>
+            <hr><br>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.goods_services|as_crispy_field }}
+                </div>
+                <div class="col-lg-4">
+                    {{ form.model_serial_number|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.category|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.date_purchased|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.warranty_guaranty|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.invoice_receipt_bill|as_crispy_field }}
+                </div>
+            </div>
+            <br><br><br>
+            <div class="h2">Technical Information On Goods/Services</div>
+            <hr><br>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.brand|as_crispy_field }}
+                </div>
+                <div class="col-lg-4">
+                    {{ form.brand_code|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.manufactured_date|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.standard|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.electrical_frequency_rating|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.voltage_required|as_crispy_field }}
+                </div>
+            </div>
+            <br><br><br>
+            <div class="h2">The Complaint</div>
+            <hr><br>
+            <div class="row">
+                <div class="col-lg">
+                    {{ form.complaint|as_crispy_field }}
+                </div>
+            </div>
+            <br><br><br>
+            <div class="h2">Redress Sought</div>
+            <hr><br>
+            <div class="row">
+                <div class="col-lg-3">
+                    {{ form.redress|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                    {{ form.other_redress|as_crispy_field }}
+                </div>
+            </div>
+            <br><br><br>
+            <div class="h2">Willingness To Attend Proceedings</div>
+            <hr><br>
+            <div class="row">
+                <strong style="text-align: justify;" class="col-lg-9 me-lg-3 px-lg-4 h5 fw-bolder">I certify the
+                    above information to be truthful and
+                    accurate to the best of my knowledge and belief. I am
+                    willing tto testify to the same at any proceedings directly
+                    related to this complaint if required tto tdo so</strong>
+                <div class="col-lg shadow rounded-4 pt-lg-3 px-lg-5 h3">
+                    {{ form.i_agree|as_crispy_field }}
+                </div>
+            </div>
+            <br><br>
+            <hr>
+            <br>
+            <div class="d-grid">
+                <button class="btn btn-lg btn-outline-dark rounded-pill"
+                    type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
